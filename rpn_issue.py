@@ -46,10 +46,9 @@ def is_number(i):
         return True
 
 
-def rpn(string: str) -> int|float:
+def rpn(lst: list[str|float|int]) -> int|float:
     stack = Stack()
-    tokens = [x for x in string]
-    for token in tokens:
+    for token in lst:
         if is_number(token):
             stack.push(float(token))
         elif token in '+-*/':
@@ -59,5 +58,5 @@ def rpn(string: str) -> int|float:
     return stack.peek()
 
 
-print(rpn('342*+'))
-print(rpn('72/'))
+print(rpn([3, 4, 2, '*', '+']))
+print(rpn([7, 2, '/']))
