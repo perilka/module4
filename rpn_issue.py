@@ -58,5 +58,5 @@ def rpn(lst: list[str|float|int]) -> int|float:
     return stack.peek()
 
 
-print(rpn([3, 4, 2, '*', '+']))
+print(rpn([3, 4.5, 2, '*', '+']))
 print(rpn([7, 2, '/']))
