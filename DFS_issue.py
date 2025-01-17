@@ -28,8 +28,7 @@ class Graph:
         return self.to_visit_list
 
     def dfs(self):
-        for node in self.to_visit(self._root):
-            print(node, end=' ')
+        return [str(node) for node in self.to_visit(self._root)]
 
 
 a = Node('a')
