@@ -1,14 +1,13 @@
 def selection_sort(arr):
     for i in range(len(arr)):
         try:
-            x = min(arr[i+1:len(arr)])
+            min_index, min_value = min(enumerate(arr[i+1:len(arr)]), key=lambda pair: pair[1])
         except ValueError:
             break
         y = arr[i]
-        if y > x:
-            arr[arr.index(x)] = y
-            arr[i] = x
-
+        if y > min_value:
+            arr[min_index + i + 1] = y
+            arr[i] = min_value
 
 
 # Пример использования:
