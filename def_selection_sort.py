@@ -10,7 +10,6 @@ def selection_sort(arr):
             arr[i] = min_value
 
 
-
 # Пример использования:
 my_list = [64, 34, 25, 12, 22, 11, 90]
 selection_sort(my_list)
