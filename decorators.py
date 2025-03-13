@@ -34,9 +34,11 @@ def requires_admin(func):
             raise PermissionError
     return wrapper
 
+
 @requires_admin
 def delete_user(user, username_to_delete):
     return f"User {username_to_delete} has been deleted by {user['username']}."
+
 
 # Пример юзеров
 admin_user = {'username': 'Alice', 'role': 'admin'}
